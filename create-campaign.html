@@ -28,7 +28,7 @@
 
 <!-- ══════════════════ PRE-FLIGHT CHECKLIST GATE ══════════════════ -->
 <div id="preflightScreen" style="background:#f9fafb;min-height:100vh;padding:100px 0 64px;">
-  <div class="container" style="max-width:720px;">
+  <div class="container" style="max-width:1500px;">
     <div class="card" style="padding:40px;">
       <!-- Header -->
       <div style="text-align:center;margin-bottom:32px;">
@@ -39,46 +39,32 @@
         </p>
       </div>
 
-      <!-- What you'll need — 4 cards -->
-      <p style="font-weight:700;color:#1A2A6C;font-size:.88rem;margin-bottom:14px;"><i class="fas fa-clipboard-list" style="color:#FF6B4A;margin-right:8px;"></i>What You'll Need to Attach</p>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px;">
-
-        <!-- Card 1 -->
-        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(26,42,108,.1)'" onmouseout="this.style.boxShadow='none'">
-          <div style="width:40px;height:40px;background:linear-gradient(135deg,#1A2A6C,#2a3f8a);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <i class="fas fa-file-medical" style="color:#fff;font-size:.9rem;"></i>
-          </div>
-          <p style="font-weight:700;color:#1A2A6C;font-size:.88rem;line-height:1.3;">Medical Report or Hospital Letter</p>
-          <p style="color:#9ca3af;font-size:.78rem;line-height:1.6;">Doctor's note, diagnosis letter, or hospital treatment plan — required for medical campaigns.</p>
+      <div class="section-header">
+        <span class="section-eyebrow">Before You Start</span>
+        <h2 class="section-title">What You'll Need</h2>
+        <p class="section-sub">Get these ready before creating your campaign.</p>
+      </div>
+      <div class="steps-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:48px;">
+        <div class="card step-card">
+          <div class="step-icon-wrap"><i class="fas fa-file-medical" style="font-size:1.2rem;"></i></div>
+          <h3 style="font-weight:800;color:#1A2A6C;font-size:1.1rem;margin-bottom:10px;">Medical Report or Hospital Letter</h3>
+          <p style="color:#6b7280;font-size:.9rem;line-height:1.7;">Doctor's note, diagnosis letter, or hospital treatment plan — required for medical campaigns.</p>
         </div>
-
-        <!-- Card 2 -->
-        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(26,42,108,.1)'" onmouseout="this.style.boxShadow='none'">
-          <div style="width:40px;height:40px;background:linear-gradient(135deg,#FF6B4A,#e85a3a);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <i class="fas fa-file-alt" style="color:#fff;font-size:.9rem;"></i>
-          </div>
-          <p style="font-weight:700;color:#1A2A6C;font-size:.88rem;line-height:1.3;">Supporting Evidence Document</p>
-          <p style="color:#9ca3af;font-size:.78rem;line-height:1.6;">Quotation, invoice, school admission letter, or project plan — for education, business, and community campaigns.</p>
+        <div class="card step-card">
+          <div class="step-icon-wrap"><i class="fas fa-file-alt" style="font-size:1.2rem;"></i></div>
+          <h3 style="font-weight:800;color:#1A2A6C;font-size:1.1rem;margin-bottom:10px;">Supporting Evidence Document</h3>
+          <p style="color:#6b7280;font-size:.9rem;line-height:1.7;">Quotation, invoice, school admission letter, or project plan — for education, business, and community campaigns.</p>
         </div>
-
-        <!-- Card 3 -->
-        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(26,42,108,.1)'" onmouseout="this.style.boxShadow='none'">
-          <div style="width:40px;height:40px;background:linear-gradient(135deg,#10b981,#059669);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <i class="fas fa-id-card" style="color:#fff;font-size:.9rem;"></i>
-          </div>
-          <p style="font-weight:700;color:#1A2A6C;font-size:.88rem;line-height:1.3;">Valid ID / Identity Proof</p>
-          <p style="color:#9ca3af;font-size:.78rem;line-height:1.6;">National ID, passport, or any government-issued identification of the campaign creator.</p>
+        <div class="card step-card">
+          <div class="step-icon-wrap"><i class="fas fa-id-card" style="font-size:1.2rem;"></i></div>
+          <h3 style="font-weight:800;color:#1A2A6C;font-size:1.1rem;margin-bottom:10px;">Valid ID / Identity Proof</h3>
+          <p style="color:#6b7280;font-size:.9rem;line-height:1.7;">National ID, passport, or any government-issued identification of the campaign creator.</p>
         </div>
-
-        <!-- Card 4 -->
-        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(26,42,108,.1)'" onmouseout="this.style.boxShadow='none'">
-          <div style="width:40px;height:40px;background:linear-gradient(135deg,#8b5cf6,#7c3aed);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <i class="fas fa-mobile-alt" style="color:#fff;font-size:.9rem;"></i>
-          </div>
-          <p style="font-weight:700;color:#1A2A6C;font-size:.88rem;line-height:1.3;">Active Mobile Money Number</p>
-          <p style="color:#9ca3af;font-size:.78rem;line-height:1.6;">The registered mobile money number where contributions will be sent upon withdrawal.</p>
+        <div class="card step-card">
+          <div class="step-icon-wrap"><i class="fas fa-mobile-alt" style="font-size:1.2rem;"></i></div>
+          <h3 style="font-weight:800;color:#1A2A6C;font-size:1.1rem;margin-bottom:10px;">Active Mobile Money Number</h3>
+          <p style="color:#6b7280;font-size:.9rem;line-height:1.7;">The registered mobile money number where contributions will be sent upon withdrawal.</p>
         </div>
-
       </div>
 
       <!-- Verification notice -->
@@ -355,11 +341,20 @@
 </div>
 
 <style>
+@media(max-width:1023px){
+  .steps-grid { grid-template-columns: 1fr !important; }
+}
 @media(max-width:767px){
   #campaignFormScreen > .container > div { display:block!important; }
   #campaignFormScreen > .container > div > div:last-child { position:static!important; margin-top:24px; }
   div[style*="grid-template-columns:1fr 1fr"] { display:block!important; }
   div[style*="grid-template-columns:1fr 1fr"] > div { margin-bottom:12px; }
+}
+@media(max-width:767px){
+  div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: 1fr !important; }
+}
+@media(max-width:480px){
+  div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: 1fr !important; }
 }
 @media(max-width:767px){
   div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: 1fr 1fr !important; }

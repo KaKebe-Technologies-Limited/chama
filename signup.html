@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up · ChamaFunds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <div style="text-align:center;margin-bottom:24px;">
+      <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;">
+        <div class="navbar-logo" style="width:44px;height:44px;">CF</div>
+        <span style="font-weight:800;color:#1A2A6C;font-size:1.1rem;">ChamaFunds</span>
+      </a>
+      <h1 style="font-weight:800;color:#1A2A6C;font-size:1.3rem;margin-top:18px;">Create your account</h1>
+      <p style="color:#9ca3af;font-size:.85rem;">Join thousands pooling money across Africa</p>
+    </div>
+
+    <button class="social-btn"><img src="https://www.google.com/favicon.ico" width="16" alt="Google" style="border-radius:2px;" /> Continue with Google</button>
+    <button class="social-btn"><i class="fab fa-facebook" style="color:#1877F2;"></i> Continue with Facebook</button>
+    <div class="auth-divider"><span>or sign up with email</span></div>
+
+    <form id="signupForm" data-validate data-success-msg="Account created!">
+      <div class="form-group">
+        <label class="form-label">Full Name <span class="required">*</span></label>
+        <input type="text" class="form-input" placeholder="Sarah Mwangi" required />
+      </div>
+      <div class="grid-2">
+        <div class="form-group">
+          <label class="form-label">Email <span class="required">*</span></label>
+          <input type="email" class="form-input" placeholder="you@email.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone <span class="required">*</span></label>
+          <input type="tel" class="form-input" placeholder="256712..." required />
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="form-group" style="position:relative;">
+          <label class="form-label">Password <span class="required">*</span></label>
+          <input type="password" id="password" class="form-input" placeholder="••••••••" required />
+          <button type="button" onclick="togglePw('password',this)" style="position:absolute;right:12px;top:36px;color:#9ca3af;font-size:.82rem;"><i class="fas fa-eye"></i></button>
+        </div>
+        <div class="form-group" style="position:relative;">
+          <label class="form-label">Confirm Password <span class="required">*</span></label>
+          <input type="password" id="confirmPassword" class="form-input" placeholder="••••••••" required />
+          <button type="button" onclick="togglePw('confirmPassword',this)" style="position:absolute;right:12px;top:36px;color:#9ca3af;font-size:.82rem;"><i class="fas fa-eye"></i></button>
+        </div>
+      </div>
+
+      <!-- Role Selection -->
+      <div class="form-group">
+        <label class="form-label">I want to… <span class="required">*</span></label>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <label id="roleCreator" style="border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;cursor:pointer;text-align:center;transition:all .2s;" onclick="selectRole('creator')">
+            <input type="radio" name="role" value="creator" style="display:none;" />
+            <div style="font-size:1.5rem;margin-bottom:6px;">🚀</div>
+            <p style="font-weight:700;color:#1A2A6C;font-size:.85rem;">Start campaigns</p>
+            <p style="font-size:.72rem;color:#9ca3af;">Raise money for causes</p>
+          </label>
+          <label id="roleDonor" style="border:1.5px solid #e5e7eb;border-radius:12px;padding:14px;cursor:pointer;text-align:center;transition:all .2s;" onclick="selectRole('donor')">
+            <input type="radio" name="role" value="donor" style="display:none;" />
+            <div style="font-size:1.5rem;margin-bottom:6px;">❤️</div>
+            <p style="font-weight:700;color:#1A2A6C;font-size:.85rem;">Donate to causes</p>
+            <p style="font-size:.72rem;color:#9ca3af;">Support campaigns</p>
+          </label>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:20px;">
+        <input type="checkbox" required style="margin-top:2px;width:16px;height:16px;cursor:pointer;" />
+        <label style="font-size:.83rem;color:#6b7280;">I agree to the <a href="#" style="color:#FF6B4A;">Terms of Service</a> and <a href="#" style="color:#FF6B4A;">Privacy Policy</a>.</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-lg">Create Account</button>
+    </form>
+    <p style="text-align:center;font-size:.88rem;color:#6b7280;margin-top:20px;">
+      Already have an account? <a href="login.html" style="color:#FF6B4A;font-weight:700;">Log In</a>
+    </p>
+  </div>
+</div>
+<script src="js/main.js"></script>
+<script>
+  function togglePw(id, btn) {
+    const input = document.getElementById(id);
+    const isText = input.type === 'text';
+    input.type = isText ? 'password' : 'text';
+    btn.innerHTML = isText ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+  }
+  function selectRole(role) {
+    document.getElementById('roleCreator').style.borderColor = role === 'creator' ? '#FF6B4A' : '#e5e7eb';
+    document.getElementById('roleCreator').style.background  = role === 'creator' ? '#fff5f3' : '';
+    document.getElementById('roleDonor').style.borderColor   = role === 'donor'   ? '#FF6B4A' : '#e5e7eb';
+    document.getElementById('roleDonor').style.background    = role === 'donor'   ? '#fff5f3' : '';
+  }
+  document.getElementById('signupForm').addEventListener('submit', e => {
+    e.preventDefault();
+    window.location.href = 'dashboard.html';
+  });
+</script>
+</body>
+</html>

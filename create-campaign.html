@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Campaign · ChamaFunds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="navbar-brand"><div class="navbar-logo">CF</div><span class="navbar-name">ChamaFunds</span></a>
+    <div class="navbar-links">
+      <a href="campaign-drives.html">Campaign Drives</a><a href="donate.html">Donate</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="create-campaign.html" class="btn btn-primary nav-cta">Start a Campaign</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu-overlay" id="menuOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="menuClose"><i class="fas fa-times"></i></button>
+  <a href="campaign-drives.html">Campaign Drives</a><a href="donate.html">Donate</a><a href="login.html">Log In</a>
+  <a href="create-campaign.html" class="btn btn-primary">🚀 Start a Campaign</a>
+</div>
+
+<section style="background:#f9fafb;padding:100px 0 64px;min-height:100vh;">
+  <div class="container" style="max-width:960px;">
+    <div style="display:grid;grid-template-columns:1fr 280px;gap:32px;align-items:start;">
+
+      <!-- FORM -->
+      <div class="card" style="padding:36px;">
+        <h1 style="font-weight:800;color:#1A2A6C;font-size:1.5rem;margin-bottom:6px;">Start a Campaign</h1>
+        <p style="color:#9ca3af;font-size:.88rem;margin-bottom:24px;">Fill in the details below to create your campaign.</p>
+
+        <!-- Step Indicator -->
+        <div class="step-indicator">
+          <div class="step-dot active" id="step1Dot">1</div>
+          <div class="step-line" id="line1"></div>
+          <div class="step-dot" id="step2Dot">2</div>
+          <div class="step-line" id="line2"></div>
+          <div class="step-dot" id="step3Dot">3</div>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:.72rem;color:#9ca3af;margin-bottom:28px;">
+          <span>Details</span><span>Goal & Payment</span><span>Launch</span>
+        </div>
+
+        <form id="campaignForm" data-validate data-success-msg="Campaign created successfully! 🎉">
+
+          <!-- STEP 1 FIELDS -->
+          <div id="formStep1">
+            <div class="form-group">
+              <label class="form-label">Campaign Title <span class="required">*</span></label>
+              <input type="text" id="campaignTitle" class="form-input" placeholder="e.g. Family Medical Fund" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Category <span class="required">*</span></label>
+              <select id="campaignCategory" class="form-input" required>
+                <option value="">Select a category</option>
+                <option>Family</option><option>Education</option><option>Medical</option>
+                <option>Community</option><option>Business</option><option>Emergency</option><option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Campaign Story <span class="required">*</span></label>
+              <textarea class="form-input" rows="6" placeholder="Tell your story — why are you raising funds?" required></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Campaign Image</label>
+              <div class="file-upload-area" id="fileUploadArea">
+                <i class="fas fa-cloud-upload-alt" style="font-size:2rem;color:#d1d5db;"></i>
+                <p style="font-size:.88rem;color:#9ca3af;margin-top:8px;">Click to upload or drag & drop</p>
+                <p style="font-size:.75rem;color:#d1d5db;">PNG, JPG up to 5MB</p>
+                <input type="file" id="fileInput" class="hidden" accept="image/*" style="display:none;" />
+              </div>
+              <div id="filePreview" class="hidden" style="margin-top:10px;">
+                <img id="previewImage" src="#" alt="Preview" style="max-height:140px;border-radius:10px;" />
+                <button type="button" id="removeFile" style="display:block;font-size:.78rem;color:#ef4444;margin-top:6px;cursor:pointer;">Remove</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">End Date (optional)</label>
+              <input type="date" class="form-input" />
+            </div>
+            <div style="display:flex;gap:12px;justify-content:flex-end;">
+              <button type="button" id="nextStep1" class="btn btn-primary">Next: Goal & Payment <i class="fas fa-arrow-right" style="margin-left:6px;"></i></button>
+            </div>
+          </div>
+
+          <!-- STEP 2 FIELDS -->
+          <div id="formStep2" style="display:none;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="form-group">
+              <div>
+                <label class="form-label">Goal Amount <span class="required">*</span></label>
+                <input type="number" class="form-input" placeholder="500000" min="1000" required />
+              </div>
+              <div>
+                <label class="form-label">Currency</label>
+                <select class="form-input">
+                  <option>UGX</option><option>KES</option><option>RWF</option>
+                  <option>NGN</option><option>ZMW</option><option>XOF</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mobile Money Number <span class="required">*</span></label>
+              <input type="tel" class="form-input" placeholder="e.g. 256712345678" required />
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="form-group">
+              <div>
+                <label class="form-label">Mobile Money Network <span class="required">*</span></label>
+                <select class="form-input" required>
+                  <option>MTN Mobile Money</option><option>Airtel Money</option>
+                  <option>Orange Money</option><option>Tigo Cash</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Country <span class="required">*</span></label>
+                <select class="form-input" required>
+                  <option>Uganda</option><option>Kenya</option><option>Rwanda</option>
+                  <option>Nigeria</option><option>Zambia</option><option>Senegal</option>
+                </select>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;justify-content:space-between;">
+              <button type="button" id="prevStep2" class="btn btn-outline"><i class="fas fa-arrow-left" style="margin-right:6px;"></i>Back</button>
+              <button type="button" id="nextStep2" class="btn btn-primary">Next: Review & Launch <i class="fas fa-arrow-right" style="margin-left:6px;"></i></button>
+            </div>
+          </div>
+
+          <!-- STEP 3 FIELDS -->
+          <div id="formStep3" style="display:none;">
+            <div style="background:#f9fafb;border-radius:14px;padding:20px;border:1px solid #e5e7eb;margin-bottom:20px;">
+              <p style="font-weight:700;color:#1A2A6C;margin-bottom:12px;">📋 Campaign Summary</p>
+              <div style="font-size:.88rem;color:#6b7280;display:flex;flex-direction:column;gap:8px;">
+                <div style="display:flex;justify-content:space-between;"><span>Title:</span><strong style="color:#1A2A6C;" id="reviewTitle">—</strong></div>
+                <div style="display:flex;justify-content:space-between;"><span>Category:</span><strong style="color:#1A2A6C;" id="reviewCategory">—</strong></div>
+                <div style="display:flex;justify-content:space-between;"><span>Platform fee:</span><strong style="color:#FF6B4A;">7.5% per contribution</strong></div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;padding:14px;background:#fff5f3;border-radius:12px;border:1px solid #ffe4dd;">
+              <input type="checkbox" id="terms" required style="margin-top:2px;width:16px;height:16px;cursor:pointer;" />
+              <label for="terms" style="font-size:.85rem;color:#6b7280;">I agree to the <a href="#" style="color:#FF6B4A;">Terms of Service</a> and <a href="#" style="color:#FF6B4A;">Privacy Policy</a>.</label>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;">
+              <button type="button" id="prevStep3" class="btn btn-outline"><i class="fas fa-arrow-left" style="margin-right:6px;"></i>Back</button>
+              <button type="submit" class="btn btn-primary btn-lg flex-1" style="flex:1;justify-content:center;">🚀 Launch Campaign</button>
+              <button type="button" class="btn btn-secondary">💾 Save Draft</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- CHECKLIST SIDEBAR -->
+      <div style="position:sticky;top:84px;">
+        <div class="card" style="padding:24px;">
+          <p style="font-weight:800;color:#1A2A6C;font-size:.9rem;margin-bottom:16px;">Campaign Checklist</p>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:.85rem;">
+            <div style="display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#10b981;"></i><span style="color:#6b7280;">Campaign Title</span></div>
+            <div style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;"></i><span style="color:#9ca3af;">Category</span></div>
+            <div style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;"></i><span style="color:#9ca3af;">Campaign Story</span></div>
+            <div style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;"></i><span style="color:#9ca3af;">Goal Amount</span></div>
+            <div style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;"></i><span style="color:#9ca3af;">Mobile Money</span></div>
+            <div style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;"></i><span style="color:#9ca3af;">Terms Accepted</span></div>
+          </div>
+          <hr class="divider" />
+          <p style="font-size:.75rem;color:#9ca3af;"><i class="fas fa-info-circle" style="margin-right:4px;"></i> Fields marked <span style="color:#ef4444;">*</span> are required.</p>
+          <div style="margin-top:16px;padding:14px;background:#f9fafb;border-radius:12px;border:1px solid #e5e7eb;">
+            <p style="font-size:.78rem;font-weight:700;color:#1A2A6C;margin-bottom:6px;">💡 Tips for a great campaign</p>
+            <ul style="font-size:.75rem;color:#9ca3af;list-style:disc;padding-left:16px;display:flex;flex-direction:column;gap:6px;">
+              <li>Write a clear, personal story</li>
+              <li>Add a photo or image</li>
+              <li>Share on WhatsApp first</li>
+              <li>Set a realistic goal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal" style="max-width:420px;">
+    <div class="modal-body" style="text-align:center;padding:40px 32px;">
+      <div style="font-size:3rem;margin-bottom:16px;">🎉</div>
+      <h3 style="font-weight:800;color:#1A2A6C;font-size:1.3rem;margin-bottom:8px;">Campaign Launched!</h3>
+      <p style="color:#9ca3af;font-size:.9rem;margin-bottom:24px;">Your campaign is live. Share it with your community and start receiving contributions.</p>
+      <a href="campaign-detail.html" class="btn btn-primary btn-block">View My Campaign</a>
+      <a href="dashboard.html" class="btn btn-outline btn-block" style="margin-top:10px;">Go to Dashboard</a>
+    </div>
+  </div>
+</div>
+
+<style>
+@media(max-width:767px){
+  section > .container > div[style*="grid-template-columns:1fr 280px"]{display:block!important;}
+  section > .container > div[style*="grid-template-columns:1fr 280px"] > div:last-child{position:static!important;margin-top:24px;}
+}
+</style>
+<script src="js/main.js"></script>
+<script>
+  // Multi-step form logic
+  const step1 = document.getElementById('formStep1');
+  const step2 = document.getElementById('formStep2');
+  const step3 = document.getElementById('formStep3');
+  const dots  = [document.getElementById('step1Dot'), document.getElementById('step2Dot'), document.getElementById('step3Dot')];
+  const lines = [document.getElementById('line1'), document.getElementById('line2')];
+
+  function goToStep(n) {
+    [step1, step2, step3].forEach((s, i) => s.style.display = i === n - 1 ? 'block' : 'none');
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === n - 1);
+      d.classList.toggle('done', i < n - 1);
+    });
+    lines.forEach((l, i) => l.classList.toggle('done', i < n - 1));
+  }
+
+  document.getElementById('nextStep1').addEventListener('click', () => {
+    const title = document.getElementById('campaignTitle');
+    if (!title.value.trim()) { title.classList.add('error'); title.focus(); return; }
+    document.getElementById('reviewTitle').textContent = title.value;
+    document.getElementById('reviewCategory').textContent = document.getElementById('campaignCategory').value || '—';
+    goToStep(2);
+  });
+  document.getElementById('prevStep2').addEventListener('click', () => goToStep(1));
+  document.getElementById('nextStep2').addEventListener('click', () => goToStep(3));
+  document.getElementById('prevStep3').addEventListener('click', () => goToStep(2));
+
+  document.getElementById('campaignForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('successModal').classList.add('open');
+  });
+</script>
+</body>
+</html>

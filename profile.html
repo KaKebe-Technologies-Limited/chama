@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile · ChamaFunds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<nav style="background:#fff;border-bottom:1px solid #e5e7eb;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:fixed;top:0;left:0;right:0;z-index:500;" id="mobileTopBar">
+  <a href="index.html" style="display:flex;align-items:center;gap:8px;"><div class="navbar-logo">CF</div><span style="font-weight:800;color:#1A2A6C;font-size:.9rem;">ChamaFunds</span></a>
+  <button id="mobileSidebarToggle" style="font-size:1.3rem;color:#6b7280;"><i class="fas fa-bars"></i></button>
+</nav>
+<div class="modal-overlay" id="sidebarOverlay" style="z-index:899;"></div>
+
+<div class="dashboard-layout" style="padding-top:60px;">
+  <aside class="sidebar">
+    <div class="sidebar-brand"><div class="navbar-logo">CF</div><span style="font-weight:800;color:#1A2A6C;font-size:1rem;">ChamaFunds</span></div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="sidebar-link"><i class="fas fa-th-large"></i>Dashboard</a>
+      <a href="#" class="sidebar-link"><i class="fas fa-rocket"></i>My Campaigns</a>
+      <a href="create-campaign.html" class="sidebar-link"><i class="fas fa-plus-circle"></i>Create Campaign</a>
+      <a href="#" class="sidebar-link"><i class="fas fa-users"></i>Contributions</a>
+      <a href="withdraw.html" class="sidebar-link"><i class="fas fa-credit-card"></i>Withdrawals</a>
+      <a href="profile.html" class="sidebar-link active"><i class="fas fa-cog"></i>Settings</a>
+    </nav>
+    <div class="sidebar-footer"><a href="index.html" class="sidebar-link logout-link"><i class="fas fa-sign-out-alt"></i>Logout</a></div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header"><h1>Profile Settings</h1><p>Manage your account details and preferences.</p></div>
+
+    <div style="max-width:680px;">
+
+      <!-- Avatar -->
+      <div class="card" style="padding:28px;margin-bottom:24px;">
+        <h2 style="font-weight:800;color:#1A2A6C;margin-bottom:20px;font-size:1rem;">Profile Photo</h2>
+        <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+          <div style="width:80px;height:80px;border-radius:50%;background:#e5e7eb;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.5rem;color:#1A2A6C;flex-shrink:0;">SM</div>
+          <div>
+            <button class="btn btn-outline btn-sm" style="margin-bottom:8px;">Upload Photo</button>
+            <p style="font-size:.75rem;color:#9ca3af;">JPG or PNG. Max 2MB.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Info -->
+      <div class="card" style="padding:28px;margin-bottom:24px;">
+        <h2 style="font-weight:800;color:#1A2A6C;margin-bottom:20px;font-size:1rem;">Personal Information</h2>
+        <form data-validate data-success-msg="Profile saved!">
+          <div class="grid-2">
+            <div class="form-group"><label class="form-label">Full Name <span class="required">*</span></label><input type="text" class="form-input" value="Sarah Mwangi" required /></div>
+            <div class="form-group"><label class="form-label">Email <span class="required">*</span></label><input type="email" class="form-input" value="sarah@example.com" required /></div>
+            <div class="form-group"><label class="form-label">Phone Number <span class="required">*</span></label><input type="tel" class="form-input" value="256712345678" required /></div>
+            <div class="form-group"><label class="form-label">Country</label>
+              <select class="form-input">
+                <option selected>Uganda</option><option>Kenya</option><option>Rwanda</option>
+                <option>Nigeria</option><option>Zambia</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </div>
+
+      <!-- Password -->
+      <div class="card" style="padding:28px;margin-bottom:24px;">
+        <h2 style="font-weight:800;color:#1A2A6C;margin-bottom:20px;font-size:1rem;">Change Password</h2>
+        <form data-validate data-success-msg="Password updated!">
+          <div class="form-group"><label class="form-label">Current Password</label><input type="password" class="form-input" placeholder="••••••••" /></div>
+          <div class="grid-2">
+            <div class="form-group"><label class="form-label">New Password</label><input type="password" id="password" class="form-input" placeholder="••••••••" /></div>
+            <div class="form-group"><label class="form-label">Confirm New Password</label><input type="password" id="confirmPassword" class="form-input" placeholder="••••••••" /></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Update Password</button>
+        </form>
+      </div>
+
+      <!-- Notifications -->
+      <div class="card" style="padding:28px;">
+        <h2 style="font-weight:800;color:#1A2A6C;margin-bottom:20px;font-size:1rem;">Notification Preferences</h2>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div><p style="font-weight:600;color:#1A2A6C;font-size:.9rem;">New Contributions</p><p style="font-size:.78rem;color:#9ca3af;">Get notified when someone donates</p></div>
+            <label class="toggle-switch"><input type="checkbox" checked /><span class="toggle-slider"></span></label>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div><p style="font-weight:600;color:#1A2A6C;font-size:.9rem;">Campaign Milestones</p><p style="font-size:.78rem;color:#9ca3af;">25%, 50%, 75%, 100% reached</p></div>
+            <label class="toggle-switch"><input type="checkbox" checked /><span class="toggle-slider"></span></label>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div><p style="font-weight:600;color:#1A2A6C;font-size:.9rem;">Withdrawal Updates</p><p style="font-size:.78rem;color:#9ca3af;">When withdrawals are processed</p></div>
+            <label class="toggle-switch"><input type="checkbox" checked /><span class="toggle-slider"></span></label>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div><p style="font-weight:600;color:#1A2A6C;font-size:.9rem;">Marketing Emails</p><p style="font-size:.78rem;color:#9ca3af;">Tips, features, and platform news</p></div>
+            <label class="toggle-switch"><input type="checkbox" /><span class="toggle-slider"></span></label>
+          </div>
+        </div>
+        <button class="btn btn-primary" style="margin-top:20px;">Save Preferences</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<style>
+.toggle-switch { position:relative; display:inline-block; width:44px; height:24px; flex-shrink:0; }
+.toggle-switch input { display:none; }
+.toggle-slider { position:absolute; inset:0; background:#d1d5db; border-radius:99px; cursor:pointer; transition:.3s; }
+.toggle-slider::before { content:''; position:absolute; width:18px; height:18px; left:3px; top:3px; background:#fff; border-radius:50%; transition:.3s; }
+.toggle-switch input:checked + .toggle-slider { background:#FF6B4A; }
+.toggle-switch input:checked + .toggle-slider::before { transform:translateX(20px); }
+@media(max-width:1023px){ .sidebar{display:none;} .sidebar.mobile-open{display:flex;position:fixed;left:0;top:0;bottom:0;z-index:900;} }
+</style>
+<script src="js/main.js"></script>
+<script>
+  document.querySelector('.dashboard-layout').style.paddingTop = window.innerWidth < 1024 ? '60px' : '0';
+  if(window.innerWidth >= 1024) document.getElementById('mobileTopBar').style.display='none';
+</script>
+</body>
+</html>

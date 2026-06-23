@@ -26,17 +26,115 @@
   <a href="create-campaign.html" class="btn btn-primary">🚀 Start a Campaign</a>
 </div>
 
-<section style="background:#f9fafb;padding:100px 0 64px;min-height:100vh;">
-  <div class="container" style="max-width:960px;">
-    <div style="display:grid;grid-template-columns:1fr 280px;gap:32px;align-items:start;">
+<!-- ══════════════════ PRE-FLIGHT CHECKLIST GATE ══════════════════ -->
+<div id="preflightScreen" style="background:#f9fafb;min-height:100vh;padding:100px 0 64px;">
+  <div class="container" style="max-width:720px;">
+    <div class="card" style="padding:40px;">
+      <!-- Header -->
+      <div style="text-align:center;margin-bottom:32px;">
+        <div style="width:64px;height:64px;background:rgba(26,42,108,.08);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 16px;">📋</div>
+        <h1 style="font-weight:800;color:#1A2A6C;font-size:1.4rem;margin-bottom:8px;">Before You Start</h1>
+        <p style="color:#6b7280;font-size:.92rem;line-height:1.7;max-width:520px;margin:0 auto;">
+          ChamaFunds verifies every campaign to protect our community from fraud. To get started, please make sure you have the following ready. Your campaign will be reviewed and activated within <strong style="color:#1A2A6C;">48 working hours</strong>.
+        </p>
+      </div>
 
-      <!-- FORM -->
+      <!-- What you'll need — 4 cards -->
+      <p style="font-weight:700;color:#1A2A6C;font-size:.88rem;margin-bottom:14px;"><i class="fas fa-clipboard-list" style="color:#FF6B4A;margin-right:8px;"></i>What You'll Need to Attach</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px;">
+
+        <!-- Card 1 -->
+        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(26,42,108,.1)'" onmouseout="this.style.boxShadow='none'">
+          <div style="width:40px;height:40px;background:linear-gradient(135deg,#1A2A6C,#2a3f8a);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-file-medical" style="color:#fff;font-size:.9rem;"></i>
+          </div>
+          <p style="font-weight:700;color:#1A2A6C;font-size:.88rem;line-height:1.3;">Medical Report or Hospital Letter</p>
+          <p style="color:#9ca3af;font-size:.78rem;line-height:1.6;">Doctor's note, diagnosis letter, or hospital treatment plan — required for medical campaigns.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(26,42,108,.1)'" onmouseout="this.style.boxShadow='none'">
+          <div style="width:40px;height:40px;background:linear-gradient(135deg,#FF6B4A,#e85a3a);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-file-alt" style="color:#fff;font-size:.9rem;"></i>
+          </div>
+          <p style="font-weight:700;color:#1A2A6C;font-size:.88rem;line-height:1.3;">Supporting Evidence Document</p>
+          <p style="color:#9ca3af;font-size:.78rem;line-height:1.6;">Quotation, invoice, school admission letter, or project plan — for education, business, and community campaigns.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(26,42,108,.1)'" onmouseout="this.style.boxShadow='none'">
+          <div style="width:40px;height:40px;background:linear-gradient(135deg,#10b981,#059669);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-id-card" style="color:#fff;font-size:.9rem;"></i>
+          </div>
+          <p style="font-weight:700;color:#1A2A6C;font-size:.88rem;line-height:1.3;">Valid ID / Identity Proof</p>
+          <p style="color:#9ca3af;font-size:.78rem;line-height:1.6;">National ID, passport, or any government-issued identification of the campaign creator.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(26,42,108,.1)'" onmouseout="this.style.boxShadow='none'">
+          <div style="width:40px;height:40px;background:linear-gradient(135deg,#8b5cf6,#7c3aed);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <i class="fas fa-mobile-alt" style="color:#fff;font-size:.9rem;"></i>
+          </div>
+          <p style="font-weight:700;color:#1A2A6C;font-size:.88rem;line-height:1.3;">Active Mobile Money Number</p>
+          <p style="color:#9ca3af;font-size:.78rem;line-height:1.6;">The registered mobile money number where contributions will be sent upon withdrawal.</p>
+        </div>
+
+      </div>
+
+      <!-- Verification notice -->
+      <div style="background:#f0fdf4;border-radius:14px;padding:20px;border:1px solid #bbf7d0;margin-bottom:28px;display:flex;gap:14px;align-items:flex-start;">
+        <i class="fas fa-shield-alt" style="color:#10b981;font-size:1.3rem;flex-shrink:0;margin-top:2px;"></i>
+        <div>
+          <p style="font-weight:700;color:#065f46;font-size:.9rem;margin-bottom:4px;">Campaign Verification & Activation</p>
+          <p style="color:#6b7280;font-size:.85rem;line-height:1.7;">Once submitted, your campaign will be reviewed by our team within <strong>48 working hours</strong>. We verify all documents and evidence before setting your campaign live. This protects contributors and ensures every campaign on ChamaFunds is legitimate. You'll receive an SMS notification when your campaign is approved and active.</p>
+        </div>
+      </div>
+
+      <!-- Fee disclosure -->
+      <div style="background:#f9fafb;border-radius:14px;padding:20px;border:1px solid #e5e7eb;margin-bottom:32px;">
+        <p style="font-weight:700;color:#1A2A6C;font-size:.9rem;margin-bottom:10px;"><i class="fas fa-percent" style="color:#FF6B4A;margin-right:8px;"></i>Platform Fee</p>
+        <p style="color:#6b7280;font-size:.88rem;line-height:1.7;">ChamaFunds charges a <strong style="color:#1A2A6C;">7.5% transaction fee</strong> on each contribution received. This covers the platform and mobile money network costs, so contributors pay exactly what they choose. Creating a campaign is always free — the fee is only deducted at withdrawal.</p>
+        <!-- Fee Calculator -->
+        <div style="margin-top:16px;background:#fff;border-radius:10px;padding:16px;border:1px solid #e5e7eb;">
+          <p style="font-size:.8rem;font-weight:700;color:#1A2A6C;margin-bottom:12px;">📊 Estimate your payout</p>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <label style="font-size:.82rem;color:#6b7280;min-width:110px;">Goal Amount (UGX)</label>
+            <input type="range" id="feeSlider" min="10000" max="2000000" step="10000" value="500000" style="flex:1;min-width:140px;" />
+            <span style="font-size:.95rem;font-weight:700;color:#1A2A6C;min-width:100px;text-align:right;" id="feeDisplay">UGX 500,000</span>
+          </div>
+          <div class="fee-calc-result" style="margin-top:12px;">
+            <div class="fee-calc-box"><p class="label">You receive</p><p class="value" id="netDisplay">UGX 462,500</p></div>
+            <div class="fee-calc-box"><p class="label">Transaction fee (7.5%)</p><p class="value coral" id="feeAmount">UGX 37,500</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirm & proceed -->
+      <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:24px;padding:16px;background:#f9fafb;border-radius:12px;border:1px solid #e5e7eb;">
+        <input type="checkbox" id="preflightCheck" style="width:17px;height:17px;margin-top:2px;cursor:pointer;flex-shrink:0;" />
+        <label for="preflightCheck" style="font-size:.88rem;color:#6b7280;cursor:pointer;line-height:1.6;">
+          I understand that I need to provide supporting evidence for my campaign, and that it will be reviewed and verified before going live within <strong style="color:#1A2A6C;">48 working hours</strong>.
+        </label>
+      </div>
+      <button id="preflightProceed" class="btn btn-primary btn-block btn-lg" disabled style="opacity:.5;cursor:not-allowed;">
+        I'm Ready — Start My Campaign <i class="fas fa-arrow-right" style="margin-left:8px;"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ CAMPAIGN FORM ══════════════════════ -->
+<div id="campaignFormScreen" style="display:none;background:#f9fafb;padding:40px 0 64px;min-height:100vh;">
+  <div class="container" style="max-width:980px;">
+    <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+      <!-- MAIN FORM CARD -->
       <div class="card" style="padding:36px;">
-        <h1 style="font-weight:800;color:#1A2A6C;font-size:1.5rem;margin-bottom:6px;">Start a Campaign</h1>
-        <p style="color:#9ca3af;font-size:.88rem;margin-bottom:24px;">Fill in the details below to create your campaign.</p>
+        <h1 style="font-weight:800;color:#1A2A6C;font-size:1.4rem;margin-bottom:4px;">Start a Campaign</h1>
+        <p style="color:#9ca3af;font-size:.86rem;margin-bottom:24px;">Fill in all details. Your campaign goes live within 48 hours after review.</p>
 
         <!-- Step Indicator -->
-        <div class="step-indicator">
+        <div class="step-indicator" style="margin-bottom:8px;">
           <div class="step-dot active" id="step1Dot">1</div>
           <div class="step-line" id="line1"></div>
           <div class="step-dot" id="step2Dot">2</div>
@@ -44,36 +142,46 @@
           <div class="step-dot" id="step3Dot">3</div>
         </div>
         <div style="display:flex;justify-content:space-between;font-size:.72rem;color:#9ca3af;margin-bottom:28px;">
-          <span>Details</span><span>Goal & Payment</span><span>Launch</span>
+          <span style="font-weight:600;" id="stepLabel1">Campaign Details</span>
+          <span id="stepLabel2">Goal & Payment</span>
+          <span id="stepLabel3">Evidence & Launch</span>
         </div>
 
-        <form id="campaignForm" data-validate data-success-msg="Campaign created successfully! 🎉">
+        <form id="campaignForm">
 
-          <!-- STEP 1 FIELDS -->
+          <!-- ── STEP 1: CAMPAIGN DETAILS ── -->
           <div id="formStep1">
             <div class="form-group">
               <label class="form-label">Campaign Title <span class="required">*</span></label>
               <input type="text" id="campaignTitle" class="form-input" placeholder="e.g. Family Medical Fund" required />
+              <p class="form-error" id="errTitle"></p>
             </div>
             <div class="form-group">
               <label class="form-label">Category <span class="required">*</span></label>
               <select id="campaignCategory" class="form-input" required>
                 <option value="">Select a category</option>
-                <option>Family</option><option>Education</option><option>Medical</option>
-                <option>Community</option><option>Business</option><option>Emergency</option><option>Other</option>
+                <option value="Family">Family</option>
+                <option value="Education">Education</option>
+                <option value="Medical">Medical</option>
+                <option value="Community">Community</option>
+                <option value="Business">Business</option>
+                <option value="Emergency">Emergency</option>
+                <option value="Other">Other</option>
               </select>
+              <p class="form-error" id="errCategory"></p>
             </div>
             <div class="form-group">
               <label class="form-label">Campaign Story <span class="required">*</span></label>
-              <textarea class="form-input" rows="6" placeholder="Tell your story — why are you raising funds?" required></textarea>
+              <textarea id="campaignStory" class="form-input" rows="6" placeholder="Tell your story — why are you raising funds? Be specific and personal." required></textarea>
+              <p class="form-error" id="errStory"></p>
             </div>
             <div class="form-group">
-              <label class="form-label">Campaign Image</label>
+              <label class="form-label">Campaign Image (optional)</label>
               <div class="file-upload-area" id="fileUploadArea">
                 <i class="fas fa-cloud-upload-alt" style="font-size:2rem;color:#d1d5db;"></i>
                 <p style="font-size:.88rem;color:#9ca3af;margin-top:8px;">Click to upload or drag & drop</p>
                 <p style="font-size:.75rem;color:#d1d5db;">PNG, JPG up to 5MB</p>
-                <input type="file" id="fileInput" class="hidden" accept="image/*" style="display:none;" />
+                <input type="file" id="fileInput" accept="image/*" style="display:none;" />
               </div>
               <div id="filePreview" class="hidden" style="margin-top:10px;">
                 <img id="previewImage" src="#" alt="Preview" style="max-height:140px;border-radius:10px;" />
@@ -82,23 +190,24 @@
             </div>
             <div class="form-group">
               <label class="form-label">End Date (optional)</label>
-              <input type="date" class="form-input" />
+              <input type="date" id="campaignEndDate" class="form-input" />
             </div>
-            <div style="display:flex;gap:12px;justify-content:flex-end;">
+            <div style="display:flex;justify-content:flex-end;margin-top:8px;">
               <button type="button" id="nextStep1" class="btn btn-primary">Next: Goal & Payment <i class="fas fa-arrow-right" style="margin-left:6px;"></i></button>
             </div>
           </div>
 
-          <!-- STEP 2 FIELDS -->
+          <!-- ── STEP 2: GOAL & PAYMENT ── -->
           <div id="formStep2" style="display:none;">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="form-group">
               <div>
                 <label class="form-label">Goal Amount <span class="required">*</span></label>
-                <input type="number" class="form-input" placeholder="500000" min="1000" required />
+                <input type="number" id="goalAmount" class="form-input" placeholder="500000" min="1000" required />
+                <p class="form-error" id="errGoal"></p>
               </div>
               <div>
                 <label class="form-label">Currency</label>
-                <select class="form-input">
+                <select id="currency" class="form-input">
                   <option>UGX</option><option>KES</option><option>RWF</option>
                   <option>NGN</option><option>ZMW</option><option>XOF</option>
                 </select>
@@ -106,134 +215,343 @@
             </div>
             <div class="form-group">
               <label class="form-label">Mobile Money Number <span class="required">*</span></label>
-              <input type="tel" class="form-input" placeholder="e.g. 256712345678" required />
+              <input type="tel" id="momoNumber" class="form-input" placeholder="e.g. 256712345678" required />
+              <p class="form-error" id="errMomo"></p>
             </div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="form-group">
               <div>
                 <label class="form-label">Mobile Money Network <span class="required">*</span></label>
-                <select class="form-input" required>
+                <select id="momoNetwork" class="form-input" required>
                   <option>MTN Mobile Money</option><option>Airtel Money</option>
                   <option>Orange Money</option><option>Tigo Cash</option>
                 </select>
               </div>
               <div>
                 <label class="form-label">Country <span class="required">*</span></label>
-                <select class="form-input" required>
+                <select id="country" class="form-input" required>
                   <option>Uganda</option><option>Kenya</option><option>Rwanda</option>
                   <option>Nigeria</option><option>Zambia</option><option>Senegal</option>
                 </select>
               </div>
             </div>
+            <!-- Fee info reminder -->
+            <div style="background:#fff5f3;border-radius:12px;padding:14px;border:1px solid #ffe4dd;margin-bottom:20px;font-size:.84rem;color:#6b7280;">
+              <i class="fas fa-info-circle" style="color:#FF6B4A;margin-right:6px;"></i>
+              A platform fee of <strong style="color:#1A2A6C;">7.5%</strong> is deducted per contribution at withdrawal. Contributors pay no extra charges.
+            </div>
             <div style="display:flex;gap:12px;justify-content:space-between;">
               <button type="button" id="prevStep2" class="btn btn-outline"><i class="fas fa-arrow-left" style="margin-right:6px;"></i>Back</button>
-              <button type="button" id="nextStep2" class="btn btn-primary">Next: Review & Launch <i class="fas fa-arrow-right" style="margin-left:6px;"></i></button>
+              <button type="button" id="nextStep2" class="btn btn-primary">Next: Evidence & Launch <i class="fas fa-arrow-right" style="margin-left:6px;"></i></button>
             </div>
           </div>
 
-          <!-- STEP 3 FIELDS -->
+          <!-- ── STEP 3: EVIDENCE & LAUNCH ── -->
           <div id="formStep3" style="display:none;">
-            <div style="background:#f9fafb;border-radius:14px;padding:20px;border:1px solid #e5e7eb;margin-bottom:20px;">
-              <p style="font-weight:700;color:#1A2A6C;margin-bottom:12px;">📋 Campaign Summary</p>
-              <div style="font-size:.88rem;color:#6b7280;display:flex;flex-direction:column;gap:8px;">
+            <!-- Summary -->
+            <div style="background:#f9fafb;border-radius:14px;padding:20px;border:1px solid #e5e7eb;margin-bottom:24px;">
+              <p style="font-weight:700;color:#1A2A6C;margin-bottom:12px;font-size:.9rem;">📋 Campaign Summary</p>
+              <div style="font-size:.86rem;color:#6b7280;display:flex;flex-direction:column;gap:8px;">
                 <div style="display:flex;justify-content:space-between;"><span>Title:</span><strong style="color:#1A2A6C;" id="reviewTitle">—</strong></div>
                 <div style="display:flex;justify-content:space-between;"><span>Category:</span><strong style="color:#1A2A6C;" id="reviewCategory">—</strong></div>
+                <div style="display:flex;justify-content:space-between;"><span>Goal:</span><strong style="color:#1A2A6C;" id="reviewGoal">—</strong></div>
+                <div style="display:flex;justify-content:space-between;"><span>Mobile Money:</span><strong style="color:#1A2A6C;" id="reviewMomo">—</strong></div>
                 <div style="display:flex;justify-content:space-between;"><span>Platform fee:</span><strong style="color:#FF6B4A;">7.5% per contribution</strong></div>
               </div>
             </div>
-            <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;padding:14px;background:#fff5f3;border-radius:12px;border:1px solid #ffe4dd;">
-              <input type="checkbox" id="terms" required style="margin-top:2px;width:16px;height:16px;cursor:pointer;" />
-              <label for="terms" style="font-size:.85rem;color:#6b7280;">I agree to the <a href="#" style="color:#FF6B4A;">Terms of Service</a> and <a href="#" style="color:#FF6B4A;">Privacy Policy</a>.</label>
+
+            <!-- Evidence uploads -->
+            <div style="margin-bottom:24px;">
+              <p style="font-weight:700;color:#1A2A6C;font-size:.9rem;margin-bottom:6px;">📎 Supporting Evidence <span class="required">*</span></p>
+              <p style="font-size:.82rem;color:#9ca3af;margin-bottom:14px;">Upload documents that prove the need for this campaign (medical report, business plan, school letter, etc.). Accepted: PDF, JPG, PNG — max 10MB each.</p>
+
+              <div id="evidenceUpload1" style="margin-bottom:12px;">
+                <label class="form-label" style="font-size:.82rem;">Document 1 — Primary Evidence <span class="required">*</span></label>
+                <div style="border:1.5px dashed #e5e7eb;border-radius:12px;padding:16px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all .2s;" id="evidenceArea1" onclick="document.getElementById('evidenceFile1').click()">
+                  <i class="fas fa-file-upload" style="font-size:1.4rem;color:#d1d5db;flex-shrink:0;"></i>
+                  <div><p style="font-size:.84rem;color:#9ca3af;">Click to upload (medical report, invoice, etc.)</p><p style="font-size:.75rem;color:#d1d5db;">PDF, JPG, PNG up to 10MB</p></div>
+                  <input type="file" id="evidenceFile1" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" onchange="handleEvidence(this,'evidenceName1')" />
+                </div>
+                <p id="evidenceName1" style="font-size:.78rem;color:#10b981;margin-top:6px;display:none;"></p>
+                <p class="form-error" id="errEvidence1"></p>
+              </div>
+
+              <div id="evidenceUpload2" style="margin-bottom:12px;">
+                <label class="form-label" style="font-size:.82rem;">Document 2 — Valid ID / Identity Proof <span class="required">*</span></label>
+                <div style="border:1.5px dashed #e5e7eb;border-radius:12px;padding:16px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all .2s;" id="evidenceArea2" onclick="document.getElementById('evidenceFile2').click()">
+                  <i class="fas fa-id-card" style="font-size:1.4rem;color:#d1d5db;flex-shrink:0;"></i>
+                  <div><p style="font-size:.84rem;color:#9ca3af;">National ID, Passport, or government ID</p><p style="font-size:.75rem;color:#d1d5db;">PDF, JPG, PNG up to 10MB</p></div>
+                  <input type="file" id="evidenceFile2" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" onchange="handleEvidence(this,'evidenceName2')" />
+                </div>
+                <p id="evidenceName2" style="font-size:.78rem;color:#10b981;margin-top:6px;display:none;"></p>
+                <p class="form-error" id="errEvidence2"></p>
+              </div>
             </div>
+
+            <!-- Terms -->
+            <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;padding:14px;background:#fff5f3;border-radius:12px;border:1px solid #ffe4dd;">
+              <input type="checkbox" id="terms" style="margin-top:2px;width:16px;height:16px;cursor:pointer;flex-shrink:0;" />
+              <label for="terms" style="font-size:.84rem;color:#6b7280;">I agree to the <a href="#" style="color:#FF6B4A;">Terms of Service</a> and <a href="#" style="color:#FF6B4A;">Privacy Policy</a>. I confirm that all information and documents provided are accurate and genuine.</label>
+            </div>
+            <p class="form-error" id="errTerms" style="margin-bottom:12px;"></p>
+
             <div style="display:flex;flex-wrap:wrap;gap:12px;">
               <button type="button" id="prevStep3" class="btn btn-outline"><i class="fas fa-arrow-left" style="margin-right:6px;"></i>Back</button>
-              <button type="submit" class="btn btn-primary btn-lg flex-1" style="flex:1;justify-content:center;">🚀 Launch Campaign</button>
-              <button type="button" class="btn btn-secondary">💾 Save Draft</button>
+              <button type="button" id="launchBtn" class="btn btn-primary btn-lg" style="flex:1;justify-content:center;">🚀 Submit Campaign for Review</button>
+              <button type="button" id="draftBtn" class="btn btn-secondary">💾 Save Draft</button>
             </div>
           </div>
         </form>
       </div>
 
-      <!-- CHECKLIST SIDEBAR -->
-      <div style="position:sticky;top:84px;">
+      <!-- LIVE CHECKLIST SIDEBAR -->
+      <div style="position:sticky;top:84px;display:flex;flex-direction:column;gap:16px;">
         <div class="card" style="padding:24px;">
-          <p style="font-weight:800;color:#1A2A6C;font-size:.9rem;margin-bottom:16px;">Campaign Checklist</p>
-          <div style="display:flex;flex-direction:column;gap:12px;font-size:.85rem;">
-            <div style="display:flex;align-items:center;gap:10px;"><i class="fas fa-check-circle" style="color:#10b981;"></i><span style="color:#6b7280;">Campaign Title</span></div>
-            <div style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;"></i><span style="color:#9ca3af;">Category</span></div>
-            <div style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;"></i><span style="color:#9ca3af;">Campaign Story</span></div>
-            <div style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;"></i><span style="color:#9ca3af;">Goal Amount</span></div>
-            <div style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;"></i><span style="color:#9ca3af;">Mobile Money</span></div>
-            <div style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;"></i><span style="color:#9ca3af;">Terms Accepted</span></div>
+          <p style="font-weight:800;color:#1A2A6C;font-size:.88rem;margin-bottom:16px;">Your Progress</p>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:.84rem;" id="checklistItems">
+            <div class="cl-item" id="cl-title" style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;width:16px;"></i><span style="color:#9ca3af;">Campaign Title</span></div>
+            <div class="cl-item" id="cl-category" style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;width:16px;"></i><span style="color:#9ca3af;">Category</span></div>
+            <div class="cl-item" id="cl-story" style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;width:16px;"></i><span style="color:#9ca3af;">Campaign Story</span></div>
+            <div class="cl-item" id="cl-goal" style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;width:16px;"></i><span style="color:#9ca3af;">Goal Amount</span></div>
+            <div class="cl-item" id="cl-momo" style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;width:16px;"></i><span style="color:#9ca3af;">Mobile Money</span></div>
+            <div class="cl-item" id="cl-evidence" style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;width:16px;"></i><span style="color:#9ca3af;">Evidence Documents</span></div>
+            <div class="cl-item" id="cl-terms" style="display:flex;align-items:center;gap:10px;"><i class="far fa-circle" style="color:#d1d5db;width:16px;"></i><span style="color:#9ca3af;">Terms Accepted</span></div>
           </div>
-          <hr class="divider" />
+          <hr class="divider" style="margin:16px 0;" />
           <p style="font-size:.75rem;color:#9ca3af;"><i class="fas fa-info-circle" style="margin-right:4px;"></i> Fields marked <span style="color:#ef4444;">*</span> are required.</p>
-          <div style="margin-top:16px;padding:14px;background:#f9fafb;border-radius:12px;border:1px solid #e5e7eb;">
-            <p style="font-size:.78rem;font-weight:700;color:#1A2A6C;margin-bottom:6px;">💡 Tips for a great campaign</p>
-            <ul style="font-size:.75rem;color:#9ca3af;list-style:disc;padding-left:16px;display:flex;flex-direction:column;gap:6px;">
-              <li>Write a clear, personal story</li>
-              <li>Add a photo or image</li>
-              <li>Share on WhatsApp first</li>
-              <li>Set a realistic goal</li>
-            </ul>
-          </div>
+        </div>
+
+        <div class="card" style="padding:20px;background:#f0fdf4;border-color:#bbf7d0;">
+          <p style="font-size:.8rem;font-weight:700;color:#065f46;margin-bottom:8px;"><i class="fas fa-clock" style="margin-right:6px;"></i>Review Timeline</p>
+          <p style="font-size:.78rem;color:#6b7280;line-height:1.6;">After submission your campaign is reviewed by our team. Expect approval or feedback within <strong>48 working hours</strong>. You'll get an SMS confirmation.</p>
+        </div>
+
+        <div class="card" style="padding:20px;">
+          <p style="font-size:.8rem;font-weight:700;color:#1A2A6C;margin-bottom:8px;">💡 Tips</p>
+          <ul style="font-size:.78rem;color:#9ca3af;list-style:disc;padding-left:16px;display:flex;flex-direction:column;gap:6px;">
+            <li>Be specific and personal in your story</li>
+            <li>Attach clear, readable documents</li>
+            <li>Set a realistic, itemised goal</li>
+            <li>Use a real campaign photo if possible</li>
+            <li>Share on WhatsApp immediately after approval</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- SUCCESS MODAL -->
 <div class="modal-overlay" id="successModal">
-  <div class="modal" style="max-width:420px;">
+  <div class="modal" style="max-width:440px;">
     <div class="modal-body" style="text-align:center;padding:40px 32px;">
-      <div style="font-size:3rem;margin-bottom:16px;">🎉</div>
-      <h3 style="font-weight:800;color:#1A2A6C;font-size:1.3rem;margin-bottom:8px;">Campaign Launched!</h3>
-      <p style="color:#9ca3af;font-size:.9rem;margin-bottom:24px;">Your campaign is live. Share it with your community and start receiving contributions.</p>
-      <a href="campaign-detail.html" class="btn btn-primary btn-block">View My Campaign</a>
-      <a href="dashboard.html" class="btn btn-outline btn-block" style="margin-top:10px;">Go to Dashboard</a>
+      <div style="width:72px;height:72px;background:#d1fae5;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 16px;">✅</div>
+      <h3 style="font-weight:800;color:#1A2A6C;font-size:1.3rem;margin-bottom:8px;">Campaign Submitted!</h3>
+      <p style="color:#6b7280;font-size:.9rem;line-height:1.7;margin-bottom:8px;">Your campaign has been submitted for review. Our team will verify your documents and activate it within <strong style="color:#1A2A6C;">48 working hours</strong>.</p>
+      <p style="color:#9ca3af;font-size:.82rem;margin-bottom:28px;">You'll receive an SMS notification as soon as it's live.</p>
+      <a href="dashboard.html" class="btn btn-primary btn-block">Go to Dashboard</a>
+      <a href="index.html" class="btn btn-outline btn-block" style="margin-top:10px;">Back to Home</a>
     </div>
   </div>
 </div>
 
 <style>
 @media(max-width:767px){
-  section > .container > div[style*="grid-template-columns:1fr 280px"]{display:block!important;}
-  section > .container > div[style*="grid-template-columns:1fr 280px"] > div:last-child{position:static!important;margin-top:24px;}
+  #campaignFormScreen > .container > div { display:block!important; }
+  #campaignFormScreen > .container > div > div:last-child { position:static!important; margin-top:24px; }
+  div[style*="grid-template-columns:1fr 1fr"] { display:block!important; }
+  div[style*="grid-template-columns:1fr 1fr"] > div { margin-bottom:12px; }
 }
+@media(max-width:767px){
+  div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: 1fr 1fr !important; }
+}
+@media(max-width:480px){
+  div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: 1fr !important; }
+}
+.cl-item.done i.far  { display:none; }
+.cl-item.done i.fas  { display:inline; }
+.cl-item i.fas       { display:none; color:#10b981; }
 </style>
+
 <script src="js/main.js"></script>
 <script>
-  // Multi-step form logic
-  const step1 = document.getElementById('formStep1');
-  const step2 = document.getElementById('formStep2');
-  const step3 = document.getElementById('formStep3');
-  const dots  = [document.getElementById('step1Dot'), document.getElementById('step2Dot'), document.getElementById('step3Dot')];
-  const lines = [document.getElementById('line1'), document.getElementById('line2')];
+/* ── Pre-flight gate ── */
+const preflightCheck  = document.getElementById('preflightCheck');
+const preflightBtn    = document.getElementById('preflightProceed');
+const preflightScreen = document.getElementById('preflightScreen');
+const formScreen      = document.getElementById('campaignFormScreen');
 
-  function goToStep(n) {
-    [step1, step2, step3].forEach((s, i) => s.style.display = i === n - 1 ? 'block' : 'none');
-    dots.forEach((d, i) => {
-      d.classList.toggle('active', i === n - 1);
-      d.classList.toggle('done', i < n - 1);
-    });
-    lines.forEach((l, i) => l.classList.toggle('done', i < n - 1));
+preflightCheck.addEventListener('change', () => {
+  preflightBtn.disabled = !preflightCheck.checked;
+  preflightBtn.style.opacity = preflightCheck.checked ? '1' : '.5';
+  preflightBtn.style.cursor  = preflightCheck.checked ? 'pointer' : 'not-allowed';
+});
+preflightBtn.addEventListener('click', () => {
+  preflightScreen.style.display = 'none';
+  formScreen.style.display = 'block';
+  window.scrollTo(0, 0);
+});
+
+/* ── Step system ── */
+const step1 = document.getElementById('formStep1');
+const step2 = document.getElementById('formStep2');
+const step3 = document.getElementById('formStep3');
+const dots  = [document.getElementById('step1Dot'), document.getElementById('step2Dot'), document.getElementById('step3Dot')];
+const lines = [document.getElementById('line1'), document.getElementById('line2')];
+const labels = [document.getElementById('stepLabel1'), document.getElementById('stepLabel2'), document.getElementById('stepLabel3')];
+
+function goToStep(n) {
+  [step1, step2, step3].forEach((s, i) => s.style.display = i === n - 1 ? 'block' : 'none');
+  dots.forEach((d, i) => { d.classList.toggle('active', i === n - 1); d.classList.toggle('done', i < n - 1); });
+  lines.forEach((l, i) => l.classList.toggle('done', i < n - 1));
+  labels.forEach((l, i) => l.style.fontWeight = i === n - 1 ? '700' : '400');
+  window.scrollTo(0,0);
+}
+
+/* ── Checklist helper ── */
+function checkItem(id, done) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.toggle('done', done);
+  const icon = el.querySelector('i');
+  const txt  = el.querySelector('span');
+  if (done) {
+    icon.className = 'fas fa-check-circle';
+    icon.style.color = '#10b981';
+    txt.style.color = '#1A2A6C';
+    txt.style.fontWeight = '600';
+  } else {
+    icon.className = 'far fa-circle';
+    icon.style.color = '#d1d5db';
+    txt.style.color = '#9ca3af';
+    txt.style.fontWeight = '400';
   }
+}
 
-  document.getElementById('nextStep1').addEventListener('click', () => {
-    const title = document.getElementById('campaignTitle');
-    if (!title.value.trim()) { title.classList.add('error'); title.focus(); return; }
-    document.getElementById('reviewTitle').textContent = title.value;
-    document.getElementById('reviewCategory').textContent = document.getElementById('campaignCategory').value || '—';
-    goToStep(2);
-  });
-  document.getElementById('prevStep2').addEventListener('click', () => goToStep(1));
-  document.getElementById('nextStep2').addEventListener('click', () => goToStep(3));
-  document.getElementById('prevStep3').addEventListener('click', () => goToStep(2));
+/* ── Live checklist bindings ── */
+document.getElementById('campaignTitle').addEventListener('input', e => checkItem('cl-title', e.target.value.trim().length > 2));
+document.getElementById('campaignCategory').addEventListener('change', e => checkItem('cl-category', e.target.value !== ''));
+document.getElementById('campaignStory').addEventListener('input', e => checkItem('cl-story', e.target.value.trim().length > 20));
+document.getElementById('goalAmount')?.addEventListener?.('input', e => checkItem('cl-goal', parseFloat(e.target.value) >= 1000));
+document.getElementById('momoNumber')?.addEventListener?.('input', e => checkItem('cl-momo', e.target.value.trim().length >= 9));
+document.getElementById('terms').addEventListener('change', e => checkItem('cl-terms', e.target.checked));
 
-  document.getElementById('campaignForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    document.getElementById('successModal').classList.add('open');
-  });
+function handleEvidence(input, nameId) {
+  const nameEl = document.getElementById(nameId);
+  if (input.files[0]) {
+    nameEl.innerHTML = '<i class="fas fa-check-circle" style="margin-right:5px;color:#10b981;"></i>' + input.files[0].name;
+    nameEl.style.display = 'block';
+    input.closest('[id^="evidenceArea"]')?.style && (input.closest('div').style.borderColor = '#10b981');
+    // check if both docs uploaded
+    const f1 = document.getElementById('evidenceFile1').files.length;
+    const f2 = document.getElementById('evidenceFile2').files.length;
+    checkItem('cl-evidence', f1 > 0 && f2 > 0);
+  }
+}
+window.handleEvidence = handleEvidence;
+
+/* ── Step 1 → 2 with validation ── */
+document.getElementById('nextStep1').addEventListener('click', () => {
+  const title    = document.getElementById('campaignTitle');
+  const category = document.getElementById('campaignCategory');
+  const story    = document.getElementById('campaignStory');
+  let valid = true;
+
+  function fieldErr(el, errId, msg) {
+    const err = document.getElementById(errId);
+    if (!el.value.trim() || (el.tagName === 'SELECT' && !el.value)) {
+      el.classList.add('error'); err.textContent = msg; err.classList.add('visible'); valid = false;
+    } else {
+      el.classList.remove('error'); err.classList.remove('visible');
+    }
+  }
+  fieldErr(title,    'errTitle',    'Please enter a campaign title.');
+  fieldErr(category, 'errCategory', 'Please select a category.');
+  if (story.value.trim().length < 30) {
+    story.classList.add('error');
+    document.getElementById('errStory').textContent = 'Please write at least 30 characters describing your campaign.';
+    document.getElementById('errStory').classList.add('visible');
+    valid = false;
+  } else {
+    story.classList.remove('error');
+    document.getElementById('errStory').classList.remove('visible');
+  }
+  if (!valid) { title.scrollIntoView({ behavior:'smooth', block:'center' }); return; }
+  checkItem('cl-title', true); checkItem('cl-category', true); checkItem('cl-story', true);
+  goToStep(2);
+});
+
+/* ── Step 2 → 3 with validation ── */
+document.getElementById('nextStep2').addEventListener('click', () => {
+  const goal = document.getElementById('goalAmount');
+  const momo = document.getElementById('momoNumber');
+  let valid = true;
+
+  if (!goal.value || parseFloat(goal.value) < 1000) {
+    goal.classList.add('error');
+    document.getElementById('errGoal').textContent = 'Enter a goal amount of at least 1,000.';
+    document.getElementById('errGoal').classList.add('visible'); valid = false;
+  } else { goal.classList.remove('error'); document.getElementById('errGoal').classList.remove('visible'); }
+
+  if (!momo.value.trim() || momo.value.trim().length < 9) {
+    momo.classList.add('error');
+    document.getElementById('errMomo').textContent = 'Enter a valid mobile money number.';
+    document.getElementById('errMomo').classList.add('visible'); valid = false;
+  } else { momo.classList.remove('error'); document.getElementById('errMomo').classList.remove('visible'); }
+
+  if (!valid) return;
+  checkItem('cl-goal', true); checkItem('cl-momo', true);
+
+  // populate summary
+  document.getElementById('reviewTitle').textContent    = document.getElementById('campaignTitle').value;
+  document.getElementById('reviewCategory').textContent = document.getElementById('campaignCategory').value;
+  document.getElementById('reviewGoal').textContent     = document.getElementById('currency').value + ' ' + Number(goal.value).toLocaleString();
+  document.getElementById('reviewMomo').textContent     = document.getElementById('momoNetwork').value + ' · ' + momo.value;
+  goToStep(3);
+});
+
+document.getElementById('prevStep2').addEventListener('click', () => goToStep(1));
+document.getElementById('prevStep3').addEventListener('click', () => goToStep(2));
+
+/* ── Final launch with validation ── */
+document.getElementById('launchBtn').addEventListener('click', () => {
+  const ev1   = document.getElementById('evidenceFile1');
+  const ev2   = document.getElementById('evidenceFile2');
+  const terms = document.getElementById('terms');
+  let valid = true;
+
+  if (!ev1.files.length) {
+    document.getElementById('errEvidence1').textContent = 'Please upload your primary evidence document.';
+    document.getElementById('errEvidence1').classList.add('visible'); valid = false;
+  } else { document.getElementById('errEvidence1').classList.remove('visible'); }
+
+  if (!ev2.files.length) {
+    document.getElementById('errEvidence2').textContent = 'Please upload a valid ID document.';
+    document.getElementById('errEvidence2').classList.add('visible'); valid = false;
+  } else { document.getElementById('errEvidence2').classList.remove('visible'); }
+
+  if (!terms.checked) {
+    document.getElementById('errTerms').textContent = 'You must agree to the Terms of Service to proceed.';
+    document.getElementById('errTerms').classList.add('visible'); valid = false;
+  } else { document.getElementById('errTerms').classList.remove('visible'); }
+
+  if (!valid) return;
+  checkItem('cl-evidence', true); checkItem('cl-terms', true);
+  document.getElementById('successModal').classList.add('open');
+});
+
+document.getElementById('draftBtn').addEventListener('click', () => {
+  window.showToast?.('Draft saved! You can continue later from your dashboard.', 'success');
+});
+
+/* ── Fee calculator (pre-flight screen) ── */
+const slider = document.getElementById('feeSlider');
+slider?.addEventListener('input', () => {
+  const amt = parseInt(slider.value);
+  const fee = Math.round(amt * 0.075);
+  document.getElementById('feeDisplay').textContent = 'UGX ' + amt.toLocaleString();
+  document.getElementById('netDisplay').textContent = 'UGX ' + (amt - fee).toLocaleString();
+  document.getElementById('feeAmount').textContent  = 'UGX ' + fee.toLocaleString();
+});
 </script>
 </body>
 </html>

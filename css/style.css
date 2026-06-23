@@ -60,8 +60,23 @@ input, select, textarea { font-family: inherit; }
   margin: 0 auto;
   padding: 0 48px;
 }
-@media (max-width: 1023px) { .container { padding: 0 32px; } }
-@media (max-width: 767px)  { .container { padding: 0 20px; } }
+/* Fluid container — stretches full width with generous side padding */
+.container-fluid {
+  width: 100%;
+  padding: 0 48px;
+}
+@media (max-width: 1023px) {
+  .container        { padding: 0 32px; }
+  .container-fluid  { padding: 0 32px; }
+}
+@media (max-width: 767px) {
+  .container        { padding: 0 20px; }
+  .container-fluid  { padding: 0 20px; }
+}
+/* Also widen the default max-width cap so content breathes more */
+:root {
+  --max-w: 1400px;
+}
 .section { padding: 88px 0; }
 .section-sm { padding: 56px 0; }
 
@@ -607,6 +622,8 @@ a.campaign-card .btn {
   .sidebar.mobile-open, .admin-sidebar.mobile-open { display: flex; position: fixed; left: 0; top: 0; bottom: 0; z-index: 900; }
   .admin-main, .main-content { padding: 16px; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  /* 4-col homepage grid drops to 2 on tablet */
+  div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
 }
 @media (max-width: 767px) {
   .section { padding: 56px 0; }
@@ -621,6 +638,8 @@ a.campaign-card .btn {
   .main-content, .admin-main { padding: 16px; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .share-buttons { grid-template-columns: 1fr; }
+  /* 4-col homepage grid drops to 1 on mobile */
+  div[style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: 1fr !important; }
 }
 
 /* ── Print ──────────────────────────────────────────────────── */
